@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Best Travel Company in South India</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap css link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="https://dynamic.tourtravelworld.com/travel-images/432390-logo.jpeg" type="image/x-icon">
+  <style>
+	@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
+		*{
+			list-style-type: none;
+			box-sizing: border-box;
+			text-decoration: none;
+		}
+		h1,h2,h3,h4,h5,h6{
+			font-family: 'Cormorant Garamond', serif;
+		}
+		.move{
+				width:270px;
+				height:auto;
+		}
+		.btn-block{
+				height:35px;
+		}
+		.menu{
+			padding: 20px 0px;
+		}
+		.menu-bar-group{
+			cursor: pointer;
+			display: inline-block;
+			margin: 20px 40px 0px 0px;			
+			margin-left: 50px;
+		}
+		.menu-bar1, .menu-bar2, .menu-bar3{
+			background-color: black;
+			width: 30px;
+			height: 4px;
+			margin-top: 5px;
+			transition: 0.4s;
+		}
+		.change .menu-bar1{
+			transform: translate(0px, 9px) rotate(-225deg);
+		}
+		.change .menu-bar2{
+			opacity: 0;
+		}
+		.change .menu-bar3{
+			transform: translate(0px, -9px) rotate(225deg);
+		}
+		.menu-items{
+			background-color: white;
+			color: black;
+			width: 250px;
+			margin-top: 60px;
+			margin-left: -300px;
+			position: absolute;
+			height: 390px;
+			transition: 0.4s;
+		}
+		.menu-items li{
+			margin-top: 20px;
+			
+			display: block;
+		}
+		.menu-items li a {
+			padding: 10px;
+			display: block;
+			transition: 0.4s;
+			text-align: center;
+			color: black;
+			font-weight: bold;
+		}
+		.menu-items li a:hover{
+			background-color: #FFCC00;
+			text-decoration: none;
+		}
+		.change .menu-items{
+			transform: translate(240px, 0px);
+		}
+		.logo{
+			width: 180px;
+			float: left;
+		}
+		.logo img{
+			width: 100%;
+			height: auto;
+		}
+		.boat{
+			width:100%; 
+			height:400px;
+		}
+		.background{
+			width: 100%;
+			height: 600px;
+		}
+		.margin-sm{
+			margin-top: 280px;
+		}
+		.margin-bg{
+			margin-top: 250px;
+		}
+		.margin-xl{
+			margin-top: -700px;
+		}
+		bg-text{
+			font-family: 'Libre Baskerville', serif;
+			font-size:78px;
+			color:white;
+		}
+		.map{
+			width: 100%;
+			height: auto;
+		}
+		.bg-quote{
+			font-size:20px;
+			display: block;
+		}
+		@media screen and (max-width: 700px){
+			.background{
+				width: 100%;
+				height: auto;
+                margin-top: 60px;
+			}
+			.bg-text{
+				padding-top: 50px;
+			}
+			.margin-bg{
+				margin-top: 250px;
+			}
+			.margin-sm{
+				margin-top: 200px;
+			}
+
+			.map{
+				display: none;
+			}
+			.margin-xl{
+				margin-top: 0px;
+			}
+			.boat{
+				width:100%; height:400px;
+			}
+			.bg-quote{
+				font-size:18px;
+				display: block;
+			}
+			.india{
+				margin-bottom: 120px;
+			}
+		}
+		@media screen and (max-width: 550px){
+			.background{
+				width: 98%;
+				height: auto;
+				margin-top:50px;
+			}
+			.boat{
+				width:100%;
+				height:200px;
+			}
+			.bg-quote{
+				font-size:14px;
+				display: block;
+			}
+			.bg-text{
+                padding-top: 200px;
+			}
+			.margin-bg{
+				margin-top: 70px;
+			}
+			.menu-items{
+				z-index: 9;
+			}
+			.move{
+				width: 150px;
+			}
+		}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body id="home">
+	<!-- navbar start here -->
+		<div class="menu" onclick="menu(this)" style="float: left; background-color: white; position: fixed; width: 100%; z-index: 10;" >
+			<div class="menu-bar-group" style="float: left;">
+				<div class="menu-bar1"></div>
+				<div class="menu-bar2"></div>
+				<div class="menu-bar3"></div>
+			</div>
+			<ul class="menu-items">
+				<li><a href="#home">HOME</a></li>
+				<li><a href="#company">COMPANY</a></li>
+				<li><a href="#aboutUs">ABOUT US</a></li>
+				<li><a href="#package">PACKAGE</a></li>
+				<li><a href="#trending">TRENDING</a></li>
+				<li><a href="#contactUs">CONTACT US</a></li>
+			</ul>
+			<div class="logo">
+				<a href="gtholidays.html"><img src="https://www.gtholidays.in/wp-content/uploads/2019/05/logo.webp" alt="logo"></a>
+			</div>
+		</div>
+		<!-- navbar end here -->
+	<div class="content" id="company"><br><br><br>
+		<img src="https://www.hdwallpapers.in/download/travel_amsterdam_4k_5k_hd_travel-5120x2880.jpg" class="background">
+		<p style="color:#FFCC00; font-size:48px;font-family: 'Ma Shan Zheng', cursive;margin-top:-400px;" class="text-center bg-text">life changing<br>
+		<span class="bg-text" style="color: white;"> travel, worldclass</span><span class="bg-quote" style="color:white;font-family: 'Libre Baskerville', serif">Travel takes us out of our comfort zones and inspires us to see, taste and try new things.</span></p>
+	
+	<div class="container margin-bg" style="position: relative;">
+		<div class="row" style="position: relative ;">
+			<div class="col-sm-4">
+				<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2021/05/ico_localguide.png.webp" style="margin-top:25px;"></div>
+				<div class="col-sm-9"><h1>30,000+ <br>Abroad Trips</h1>
+				<p style="text-align: justify;" class="text-muted">For the last decade, GT Holidays have organized more than 30,000 international itineraries.</p></div>
+			</div>
+			<div class="col-sm-4">
+				<div class="col-sm-3">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2021/05/ico_maps.png.webp" style="margin-top:25px;">
+				</div>
+				<div class="col-sm-9">
+				<h1>Handcrafted <br>Experiences</h1>
+				<p style="text-align: justify;" class="text-muted">Each and every itinerary is customized according to the taste of the customers.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="col-sm-3">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2021/05/ico_adventurous.png.webp" style="margin-top:25px;">
+				</div>
+				<div class="col-sm-9">
+				<h1>96% Happy<br> Travelers</h1>
+				<p style="text-align: justify;" class="text-muted">GT Holidays holds record of 96% customer satisfaction and all customers are retained with us.</p>
+				</div>
+			</div>
+		</div><br>
+	</div>
+</div>
+	<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2019/11/GT-Holidays-Travel-Company-in-South-India.jpeg.webp" class="background" width="95%">
+	<div class="container" id="aboutUs">
+		<br><br>
+		<h1>Welcome to GT Holidays</h1><br>
+		<p style="text-align:justify;" class="text-muted">GT Holidays Pvt. Ltd is a subsidiary of Sangam Group of Hotels, one of the biggest hotel chains in south Tamil Nadu. The Sangam Group of Hotels founded in 1968 has for forty years provided impeccable service and outstanding hospitality. It currently has 19 properties in Tamil Nadu. GT Holidays Pvt. Ltd built on this strong foundation aims to provide great customer satisfaction and an exemplary holiday experience. Planning a once in a lifetime holiday or a yearly corporate retreat? No problem! GT Holidays can get you what you want and in the minimal time. One of the best destination management companies in South India, it has the experience and infrastructure to handle any customer demand. In addition to destination management, GT Holidays also plans corporate tours, incentive trips, college/school excursions, business travel, arranges car/railway & hotel bookings and much, much more.</p>
+		<p class="text-muted">Discover what makes GT Holidays and its offerings distinct from the rest of the pack and indispensable to its customers.</p>
+		<br>
+		<h1>Stress-Free Holidays with GT</h1><br><br>
+		<marquee>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-at-GT-Holidays.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Option-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Options-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Option-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-at-GT-Holidays.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Option-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Options-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Option-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-at-GT-Holidays.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Option-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Options-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Option-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Options-at-GT-Holidays.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/EMI-Option-GT-Holidays-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Options-1.jpg.webp" class="move">
+			</a>
+			<a href="#">
+				<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/GT-Holidays-EMI-Option-1.jpg.webp" class="move">
+			</a>
+		</marquee>
+		<br>	
+		<h1>Cordelia Cruises</h1>
+		<p class="text-muted" style="text-align:justify;">Book your new Cordelia Cruise Packages in India through GT Holidays. We are one of the official ticket booking partners of Cordelia Cruises. Make your journey as beautiful and exciting as the destination you’re headed to while on a cruise vacation! So sit back, relax and rejuvenate for an inspirational retreat with us. Our premium and stylish yet comfortable cruise ship staterooms will help you re-energize after a day full of entertainment and activities onboard.</p>
+		<br>
+		<img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/06/Cordelia-Cruises-Packages.jpeg.webp" class="boat">
+		<br>
+		<h1>GT Group Departures</h1>
+		<marquee>
+			<a href="#"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Dubai-Group-2-Departure.jpg.webp" class="move"></a>
+			<a href="#"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Abudhabi-Group-Departure.jpg.webp" class="move"></a>
+			<a href="#"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Dubai-Group-3-Departure.jpg.webp"class="move"></a>
+			<a href="#"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Goa-Special-Offer.jpg.webp" class="move"></a>
+			<a href="#"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Kashmir-Group-Departure.jpg.webp" class="move"></a>
+		</marquee><br><br><br><br>
+		<center><a href="#" class="btn btn-warning " style="color:black; background-color:#FFCC00; font-weight:600;">KNOW MORE</a></center>
+		<h1 id="package">Popular Packages</h1>
+		<div class="row">
+			<div class="col-sm-8"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/03/India-Tour-Packages-770x375.webp" class="img-thumbnail india" width="99%">
+			<center>
+				<h1 style="margin-top:-200px; color:white;">India</h1>
+				<a href="#" class="btn btn-warning" style="color:black; font-weight:600; background-color:#FFCC00;">102 TOURS</a>
+			</center>
+			</div>
+			<div class="col-sm-4"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/03/International-Tour-Package-by-GT-Holiday-370x375.webp" class="img-thumbnail" width="99%">
+			<center>
+				<h1 style="margin-top:-200px; color:white;">International</h1>
+				<a href="#" class="btn btn-warning" style="color:black; font-weight:600; background-color:#FFCC00;">468 TOURS</a>
+			</center>
+			</div>
+		</div>
+		<div class="row" style="margin-top:120px;">
+			<div class="col-sm-4"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/02/International-Honeymoon-Packages-370x375.jpg" class="img-thumbnail" width="99%">
+				<center>
+					<h1 style="margin-top:-200px; color:white;">Honeymoon Tours</h1>
+					<a href="#" class="btn btn-warning" style="color:black; font-weight:600; background-color:#FFCC00;">17 TOURS</a>
+				</center>
+			</div>
+			<div class="col-sm-4"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/03/Europe-tour-package-by-GT-Holiday-370x375.webp" class="img-thumbnail" width="99%">
+			<center>
+				<h1 style="margin-top:-200px; color:white;">Europe</h1>
+				<a href="#" class="btn btn-warning" style="color:black; font-weight:600; background-color:#FFCC00;">135 TOURS</a>
+			</center>
+			</div>
+			<div class="col-sm-4"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/03/Educational-Tour-Packages-370x375.webp" class="img-thumbnail" width="99%">
+			<center>
+				<h1 style="margin-top:-200px; color:white;">Educational Package Tours</h1>
+				<a href="#" class="btn btn-warning" style="color:black; font-weight:600; background-color:#FFCC00;">15 TOURS</a>
+			</center>
+			</div>
+		</div><br><br><br><br><br>
+		<h1 class="marging-sm">GT Exclusive Collection</h1>
+		<p class="text-muted" style="text-align:justify;">GT’s exclusive collection of hotels and resorts are selected carefully and hand picked such that they are unique on their own stay. All these premium properties will deliver the best vacation to the guests.</p>
+		<div class="row">
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Tamara-Kodai-Collection-1.jpg.webp" class="img-thumbnail img-responsive"></div>
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Niraamaya-Kumarakom-Collection-1.jpg.webp" class="img-thumbnail img-responsive"></div>
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Anantya-Resorts-Collection-1.jpg.webp" class="img-thumbnail img-responsive"></div>
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/05/Mantrakoodam-Kumbakonam-Collection.jpg.webp" class="img-thumbnail img-responsive"></div>
+		</div><br>
+		<center><a href="#" class="btn btn-warning " style="color:black; background-color:#FFCC00; font-weight:600;">VIEW ALL</a></center>
+		<br>
+		<h1>Our happy Clients</h1>
+			<div class="row">
+				<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/08/4.jpg.webp" width="100%" height="auto"></div>
+				<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/08/7.jpg.webp" width="100%" height="auto"></div>
+				<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/08/2.jpg.webp" width="100%" height="auto"></div>
+				<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2022/08/3.jpg.webp" width="100%" height="auto"></div>
+			</div>
+		<h1 id="trending">Trending Tours</h1>
+		<div class="row">
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2019/07/burj-al-arab-680x500.jpg" class="img-thumbnail img-responsive">
+				<div class="caption">
+					<small class="text-muted">Dubai-United Arab Emirates</small><br>
+					<h4>Dubai City Tour Packages</h4>
+				</div>
+			</div>
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2019/07/gulmarg-snow-skiing-trip-680x500.jpg" class="img-thumbnail img-responsive">
+				<div class="caption">
+					<small class="text-muted">Switzerland, Zurish</small><br>
+					<h4>Best Switzerland Packages</h4>
+				</div>
+			</div>
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2019/07/bay-of-garden-singapore-680x500.jpg" class="img-thumbnail img-responsive">
+				<div class="caption">
+					<small class="text-muted">Singapore, santosa</small><br>
+					<h4>Amazinf Singapore Tour</h4>
+				</div>
+			</div>
+			<div class="col-sm-3"><img src="https://d2trw71p2ngy68.cloudfront.net/wp-content/uploads/2019/12/maldives-680x500.jpg" class="img-thumbnail img-responsive">
+				<div class="caption">
+					<small class="text-muted">Dehli-India</small><br>
+					<h4>Magical India Tour</h4>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+	<img src="https://p.kindpng.com/picc/s/4-41722_blank-color-world-map-hd-png-download.png" class="map">
+	<div class="row margin-xl">
+		<div class="container " id="contactUs">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<center>
+					<h1>
+					Stay Connected
+				</h1><br>
+				<h3>
+					Phone Number
+					</h3><br>
+				<h4>+91 9940882200</h4><br>
+				<h3>Email</h3><br>
+				<h4>+91 9940882200</h4>
+				</center>
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5">
+			<h2>Book Your Dream Vacay Today!</h2>
+				<form>
+					<input type="text" placeholder="Name" class="btn-block"><br>
+					<input type="text" placeholder="City"  class="btn-block"><br>
+					<input type="email" placeholder="Email"  class="btn-block"><br>
+					<input type="number" placeholder="Phone Number"  class="btn-block"><br>
+					<input type="text" placeholder="Travel Destination"  class="btn-block"><br>
+					<input type="Date" placeholder="Date of Travel"  class="btn-block"><br>
+					<input type="Number" placeholder="Number of People"  class="btn-block"><br>
+					<input type="text" placeholder="Vacation Type "  class="btn-block"><br>
+					<input type="submit" value="ENQUIRE NOW" class="btn btn-warning btn-block" style="color:black; background-color:#FFCC00; font-weight:600;">
+				</form>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+	</div>
+	
+	<div>
+		<div class="row" style="background-color:black;color:white; margin-top:170px; width: 100%;">
+		<div class="container">
+		
+			<div class="col-sm-3">
+				<h2 style="border-bottom:2px solid white; height:50px;">Corporate Office</h2><br>
+				<p>GT Holidays Pvt LTD,<br>
+					Novel Tech Park,<br>
+					Opposite to 1 MG Mall,<br>
+					MG Road, Bangalore – 560042<br>
+					Karnataka, India.</p>
+			</div>
+			<div class="col-sm-3">
+				<h2 style="border-bottom:2px solid white; height:50px;">Head Office</h2><br>
+				<p>	GT Holidays Pvt LTD,<br>
+					No.1, Gemini Parsn,<br>
+					Kodambakkam High Road,<br>
+					Nungambakkam, Chennai – 600006<br>
+					Tamilnadu, India.</p>
+			</div>
+			<div class="col-sm-3">
+				<h2 style="border-bottom:2px solid white; height:50px;">Our Branches</h2><br>
+				<p>Hyderabad<br>
+					Bangalore<br>
+					Chennai<br>
+					Coimbatore<br>
+					Erode</p>
+			</div>
+			<div class="col-sm-3">
+				<h2 style="border-bottom:2px solid white; height:50px;">Get Updates</h2>
+				<br>
+				<form><input type="email" placeholder="Email"><br><br><input type="submit" value="SUBSCRIBE" style="color:black; background-color:white; font-weight:600;"></form>
+			</div>
+		</div>
+		</div>
+	</div>
+	<script>
+		function menu(x){
+			x.classList.toggle("change");
+		}
+	</script>
+</body>
+</html>
